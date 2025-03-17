@@ -1640,6 +1640,15 @@ class OvercookedGridworld(object):
         if (not soup.is_ready) or (soup.recipe not in state.all_orders):
             return 0
 
+        delivered_recipe = soup.recipe
+        if delivered_recipe in state._all_orders:
+            new_orders = list(state._all_orders)
+            new_orders.remove(delivered_recipe)
+            state._all_orders = new_orders
+        if delivered_recipe in state._bonus_orders:
+            new_bonus = list(state._bonus_orders)
+            new_bonus.remove(delivered_recipe)
+            state._bonus_orders = new_bonus   
         return self.get_recipe_value(state, soup.recipe)
 
     def resolve_movement(self, state, joint_action):

@@ -1633,11 +1633,12 @@ class OvercookedGridworld(object):
         Deliver the soup, and get reward if there is no order list
         or if the type of the delivered soup matches the next order.
         """
-        assert (
-            soup.name == "soup"
-        ), "Tried to deliver something that wasn't soup"
-        assert soup.is_ready, "Tried to deliever soup that isn't ready"
+        # Remove soup from player's hand
         player.remove_object()
+
+        # Force 0 reward if not correct or not fully cooked
+        if (not soup.is_ready) or (soup.recipe not in state.all_orders):
+            return 0
 
         return self.get_recipe_value(state, soup.recipe)
 

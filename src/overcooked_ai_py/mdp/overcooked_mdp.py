@@ -880,11 +880,8 @@ class OvercookedState(object):
 
     @property
     def all_orders(self):
-        return (
-            sorted(self._all_orders)
-            if self._all_orders
-            else sorted(Recipe.ALL_RECIPES)
-        )
+        return sorted(self._all_orders)
+            
 
     @property
     def bonus_orders(self):

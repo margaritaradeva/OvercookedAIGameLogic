@@ -1638,6 +1638,7 @@ class OvercookedGridworld(object):
             return 0
 
         delivered_recipe = soup.recipe
+        recipe_value = self.get_recipe_value(state, soup.recipe)
         if delivered_recipe in state._all_orders:
             new_orders = list(state._all_orders)
             new_orders.remove(delivered_recipe)
@@ -1646,7 +1647,7 @@ class OvercookedGridworld(object):
             new_bonus = list(state._bonus_orders)
             new_bonus.remove(delivered_recipe)
             state._bonus_orders = new_bonus   
-        return self.get_recipe_value(state, soup.recipe)
+        return recipe_value
 
     def resolve_movement(self, state, joint_action):
         """Resolve player movement and deal with possible collisions"""

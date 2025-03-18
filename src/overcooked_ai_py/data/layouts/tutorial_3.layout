@@ -7,7 +7,7 @@
     "start_all_orders" : [
     ],
     "start_bonus_orders" : [
-        { "ingredients" : ["onion", "tomato", "tomato"]}
+        { "ingredients" : ["onion", "onion", "onion"]}
     ],
     "order_bonus" : float('inf'),
     "onion_value" : 21,

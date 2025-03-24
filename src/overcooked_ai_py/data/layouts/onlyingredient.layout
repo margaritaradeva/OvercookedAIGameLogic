@@ -2,7 +2,7 @@
     "grid":  """XXXPX
                 O X1P
                 T2X D
-                0 X X
+                O X X
                 XXXSX""",
     "start_bonus_orders": [],
     "start_all_orders": [

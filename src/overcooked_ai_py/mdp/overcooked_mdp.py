@@ -1639,14 +1639,15 @@ class OvercookedGridworld(object):
 
         delivered_recipe = soup.recipe
         recipe_value = self.get_recipe_value(state, soup.recipe)
-        if delivered_recipe in state._all_orders:
+        if delivered_recipe in state._all_orders and delivered_recipe in state._bonus_orders:
             new_orders = list(state._all_orders)
             new_orders.remove(delivered_recipe)
+            new_orders.remove(delivered_recipe)
             state._all_orders = new_orders
-        elif delivered_recipe in state._bonus_orders:
-            new_bonus = list(state._bonus_orders)
-            new_bonus.remove(delivered_recipe)
-            state._bonus_orders = new_bonus   
+        elif delivered_recipe in state._all_orders:
+            new_orders = list(state._all_orders)
+            new_orders.remove(delivered_recipe)
+            state._all_orders = new_orders  
         return recipe_value
 
     def resolve_movement(self, state, joint_action):

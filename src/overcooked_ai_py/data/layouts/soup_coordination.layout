@@ -11,12 +11,7 @@
         { "ingredients" : ["tomato"]},
         { "ingredients" : ["onion"]}
     ],
-    "start_bonus_orders" : [
-        { "ingredients" : ["tomato"]},
-        { "ingredients" : ["tomato", "onion", "onion"]},
-        { "ingredients" : ["tomato", "tomato", "tomato"]},
-        { "ingredients" : ["onion"]}
-    ],
+    "start_bonus_orders" : [],
     "onion_value" : 21,
     "tomato_value" : 13,
     "onion_time" : 15,

@@ -1627,8 +1627,12 @@ class OvercookedGridworld(object):
 
     def deliver_soup(self, state, player, soup):
         """
-        Deliver the soup, and get reward if there is no order list
-        or if the type of the delivered soup matches the next order.
+        Deliver the soup, and get a reward.
+        Since there is no actual space decicated for throwing out soup if a recipe is not in the orders list
+        it can be served for a reward of 0 points.
+
+        If the order was a bonus order it will get popped out of both "_all_orders" and "_bonus_orders" as if this is not done 
+        the game freezes completely.
         """
         # Remove soup from player's hand
         player.remove_object()

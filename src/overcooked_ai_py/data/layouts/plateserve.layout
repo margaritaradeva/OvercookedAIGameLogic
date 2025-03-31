@@ -3,7 +3,7 @@
                 D    X1P
                 X 2  X P
                 S    X O
-                XDXXDXSX""",
+                XDXXDXXX""",
     "start_bonus_orders": [],
     "start_all_orders": [
         { "ingredients" : ["onion", "onion", "onion"]},

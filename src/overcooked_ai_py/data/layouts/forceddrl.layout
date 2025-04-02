@@ -12,7 +12,7 @@
         { "ingredients" : ["onion", "onion", "onion"]}
     ],
     "start_bonus_orders" : [],
-    "recipe_values" : [10, 10, 10, 15],
-    "recipe_times" : [10, 10, 10, 10],
+    "recipe_values" : [10, 10, 10, 10,10],
+    "recipe_times" : [20, 20, 20, 20,20],
     "rew_shaping_params": None
 }

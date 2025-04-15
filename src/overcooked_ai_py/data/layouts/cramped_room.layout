@@ -4,7 +4,10 @@
                 X1  X
                 XDXSX""",
     "start_bonus_orders": [],
-    "start_all_orders" : [
+    "start_all_orders": [
+        { "ingredients" : ["onion"]},
+        { "ingredients" : ["onion", "onion"]},
+        { "ingredients" : ["onion", "onion", "onion"]},
         { "ingredients" : ["onion", "onion", "onion"]}
     ],
     "rew_shaping_params": None

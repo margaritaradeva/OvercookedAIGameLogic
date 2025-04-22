@@ -1,5 +1,7 @@
 {
-    "grid":  """XXPDXXX
+    "grid":  """XXPXXXX
+                O   2 S
+                XXPDXXX
                 O   1 S
                 XXXXXXX""",
     "start_all_orders" : [

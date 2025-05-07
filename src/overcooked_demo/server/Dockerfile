@@ -1,4 +1,4 @@
-FROM python:3.7-buster 
+FROM python:3.9-buster 
 
 ARG BUILD_ENV
 ARG OVERCOOKED_BRANCH
@@ -8,6 +8,8 @@ WORKDIR /app
 
 # Install non-chai dependencies
 COPY ./requirements.txt ./requirements.txt
+RUN pip install --upgrade pip setuptools
+
 RUN pip install -r requirements.txt
 
 # Install eventlet production server if production build
